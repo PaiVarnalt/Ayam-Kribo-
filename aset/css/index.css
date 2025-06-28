@@ -1,0 +1,26 @@
+/* Smooth animation on navigation links hover */
+    nav a {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    nav a:hover {
+      color: #FBBF24; /* amber-400 */
+      transform: scale(1.1);
+    }
+    /* Animated logo shake on hover */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-3px) rotate(-5deg); }
+      50% { transform: translateX(3px) rotate(5deg); }
+      75% { transform: translateX(-3px) rotate(-5deg); }
+    }
+    #logo:hover {
+      animation: shake 0.6s ease-in-out;
+    }
+    /* Navbar background and shadow transition */
+    nav {
+      transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    }
+    nav.scrolled {
+      background-color: #b91c1c; /* darker red */
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
+    }

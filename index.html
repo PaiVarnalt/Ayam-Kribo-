@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ayam Kribo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="aset/css/index.css">
+  
+  <style>
+    /* Optional: Hide scrollbar on mobile */
+    html {
+      scroll-behavior: smooth;
+    }
+      html, body {
+    overflow-x: hidden;
+    }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;    
+  }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen overflow-x-hidden">
+  <!-- Responsive Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-red-900 text-white font-semibold text-sm shadow-md sm:h-max md:h-16">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Navbar Top Bar -->
+    <div class="flex items-center justify-between md:h-1">
+
+      <!-- Logo kiri (hanya mobile) -->
+      <div class="flex-shrink-0 md:hidden">
+        <img src="aset/img/logo.png" class="w-8 h-8" alt="Logo Ayam Kribo" />
+      </div>
+
+      <!-- Tombol hamburger (mobile only) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center justify-center h-14 space-x-4">
+      <a href="#beranda" class="hover:text-amber-400">BERANDA</a>
+      <a href="#tentang" class="hover:text-amber-400">TENTANG</a>
+      <a href="#promo" class="hover:text-amber-400">PROMO</a>
+
+      <!-- Logo Tengah (desktop only) -->
+      <div class="hidden md:block mx-4 flex-shrink-0" title="Logo Ayam Kribo">
+        <img src="aset/img/logo.png" class="w-20 h-20 mt-6" alt="Logo" />
+      </div>
+
+      <a href="#menu" class="hover:text-amber-400">MENU</a>
+      <a href="#artikel" class="hover:text-amber-400">ARTIKEL</a>
+      <a href="#kontak" class="hover:text-amber-400">KONTAK</a>
+    </div>
+
+    <!-- Mobile Menu (toggle) -->
+    <div id="mobile-menu" class="hidden md:hidden flex-col space-y-2 mt-2 pb-4 px-4 w-full">
+      <a href="#beranda" class="block hover:text-amber-400">BERANDA</a>
+      <a href="#tentang" class="block hover:text-amber-400">TENTANG</a>
+      <a href="#promo" class="block hover:text-amber-400">PROMO</a>
+      <a href="#menu" class="block hover:text-amber-400">MENU</a>
+      <a href="#artikel" class="block hover:text-amber-400">ARTIKEL</a>
+      <a href="#kontak" class="block hover:text-amber-400">KONTAK</a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="beranda" class="relative w-full h-screen pt-16">
+
+    <img src="aset/img/banners.jpg" class="absolute inset-0 w-full h-full object-cover z-0">
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold drop-shadow-lg">AYAM KRIBO</h1>
+      <p class="text-base sm:text-lg md:text-2xl font-medium mt-4 drop-shadow-md">"Renyahnya Bikin Kepikiran"</p>
+      <a href="#menu" class="mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-md shadow-md transition">
+        Lihat Menu
+      </a>
+    </div>
+
+  </section>
+
+  <section id="tentang" class="min-h-screen flex items-center justify-center px-6 text-center py-24 bg-white">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Image -->
+    <div class="">
+      <img src="aset/img/team.jpg" class="rounded-md shadow-md">
+    </div>
+
+    <!-- Text -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-semibold text-red-900 mb-4">Tentang Kami</h2>
+      <p class="text-gray-700 leading-relaxed text-base md:text-lg mb-4">
+        Kami percaya bahwa makanan enak bukan hanya soal rasa, tapi juga pengalaman. Karena itu, setiap potong ayam Kribo digoreng dengan teknik presisi, menggunakan bahan segar tanpa MSG berlebih.
+      </p>
+      <ul class="text-sm md:text-base text-gray-700 space-y-2 mt-6">
+        <li class="flex items-start gap-2"><span class="text-red-900">✔</span> Dimasak oleh tim profesional berpengalaman</li>
+        <li class="flex items-start gap-2"><span class="text-red-900">✔</span> Bahan berkualitas dan terjamin halal</li>
+        <li class="flex items-start gap-2"><span class="text-red-900">✔</span> Proses higienis dan rasa konsisten</li>
+      </ul>
+    </div>
+
+    </div>
+  </section>
+  
+  <section id="promo" class="bg-white py-8 px-2">
+      <h2 class="text-3xl font-bold text-red-900 mb-8 text-center">Promo Tersedia</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        
+        <!-- ITEM 1 -->
+        <div class="bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="aset/img/promo1.jpg" alt="Promo 1" class="w-full h-96 object-cover">
+          <div class="p-4">
+            <h4 class="text-lg font-bold text-gray-900 pb-1">5 Potong Ayam Kribo</h3>
+            <p class="text-sm text-gray-600 mb-3">Dapatkan 5 potong ayam kribo dengan diskon hingga 50% dan gratis antar ke rumah! untuk Minggu ini.</p>
+            <a href="#" class="inline-block bg-red-600 text-white text-sm px-4 py-1 rounded-full hover:bg-red-700 transition">Pesan Sekarang</a>
+          </div>
+        </div>
+    
+        <!-- ITEM 2 -->
+        <div class="bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="aset/img/promo2.jpg" alt="Promo 2" class="w-full h-96 object-cover">
+          <div class="p-4">
+            <h4 class="text-lg font-bold text-gray-900 pb-1">Promo Spicy Wings</h3>
+            <p class="text-sm text-gray-600 mb-3">Nikmati lezatnya Spicy Wings khas Ayam Kribo, hanya dengan Rp 15.000 untuk Minggu ini</p>
+            <a href="#" class="inline-block bg-red-600 text-white text-sm px-4 py-1 rounded-full hover:bg-red-700 transition">Pesan Sekarang</a>
+          </div>
+        </div>
+    
+        <!-- ITEM 3 -->
+        <div class="bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="aset/img/promo3.jpg" alt="Promo 3" class="w-full h-96 object-cover">
+          <div class="p-4">
+            <h4 class="text-lg font-bold text-gray-900 pb-1">Promo Buy 1 Get 1</h3>
+            <p class="text-sm text-gray-600 mb-3">Nikmati sensasi dingin dan manis dari Ice Cream Chocolate dan Milkshake khas Ayam Kribo.</p>
+            <a href="#" class="inline-block bg-red-600 text-white text-sm px-4 py-1 rounded-full hover:bg-red-700 transition">Pesan Sekarang</a>
+          </div>
+        </div>
+    
+        <!-- ITEM 4 -->
+        <div class="bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="aset/img/promo4.jpg" alt="Promo 4" class="w-full h-96 object-cover">
+          <div class="p-4">
+            <h4 class="text-lg font-bold text-gray-900 pb-1">Chicken Burger Gratis Cola</h3>
+            <p class="text-sm text-gray-600 mb-3">Nikmati lezatnya Chicken Burger hanya minggu ini dan GRATIS segelas cola dan tambahan diskon 20%. </p>
+            <a href="#" class="inline-block bg-red-600 text-white text-sm px-4 py-1 rounded-full hover:bg-red-700 transition">Pesan Sekarang</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <div class="bg-red-900 text-white py-12 text-center mb-12 shadow-lg mt-12">
+      <h3 class="text-2xl font-bold mb-2">Gabung Jadi Member Kribo!</h3>
+      <p class="text-sm mb-4">Dapatkan diskon eksklusif dan promo spesial tiap minggu!</p>
+      <a href="https://wa.me/+62812345678?text=min mau daftar jadi member kribo" class="inline-block bg-white text-red-800 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition">Daftar Sekarang</a>
+    </div>
+
+  <section id="menu" class="min-h-screen bg-white px-4 py-10 text-center">
+  <div class="max-w-6xl mx-auto">
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-extrabold text-red-900 tracking-wide mb-10 pt-4 relative inline-block">
+      Menu Kami
+    </h2>
+    
+<!-- Panah dan Scroll Menu -->
+<div class="relative">
+  <!-- Tombol Kiri -->
+  <button id="scrollLeft" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-1 hidden sm:inline">
+    <
+  </button>
+
+  <!-- Kontainer Menu Scroll -->
+<div id="scrollMenu" class="flex overflow-x-auto gap-x-4 p-4 scrollbar-hidden scroll-smooth">
+    <!-- Kartu Menu -->
+
+<a href="https://wa.me/+62812345678?text=Kak pesan chicken burger (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu1.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Chicken Burger</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 18.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan spicy wings (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu2.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Spicy Wings</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 15.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan ayam kribo (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu3.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Ayam Kribo</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 8.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan yakitori (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu4.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Yakitori</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan cheese stick (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu9.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Cheese Stick</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan Hotdog (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu6.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Hotdog</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan French Fries (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu7.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">French Fries</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan Nugget (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu8.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Nugget</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan ice cream Chocolate (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu5.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Ice Cream Chocolate</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan coca cola (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu10.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Coca-Cola</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan ice matcha (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu11.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Ice Matcha</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan mineral water (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu13.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Mineral Water</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+<a href="https://wa.me/+62812345678?text=Kak pesan Milkshake (jumlah)">
+  <div class="w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0 bg-white shadow-xl rounded-xl p-4">
+    <img src="aset/img/menu12.jpg" class="w-full h-32 sm:h-36 md:h-40 object-cover rounded-md mb-2" alt="Ayam Crispy">
+    <h3 class="font-semibold text-gray-800 text-sm sm:text-base pb-5 pt-3">Milkshake</h3>
+    <div class="flex justify-between items-center pt-2">
+      <p class="text-sm text-gray-500">Rp 20.000</p>
+      <button class="bg-red-900 text-white rounded px-6 py-1 text-xs">Pesan</button>
+    </div>
+  </div>
+</a>
+
+  </div>
+
+  <!-- Tombol Kanan -->
+  <button id="scrollRight" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-1 hidden sm:inline">
+    >
+  </button>
+</div>
+
+</section>
+
+
+
+<a
+  href="https://wa.me/+62812345678"
+  class="fixed bottom-4 right-4 z-50 bg-green-500 rounded-full p-4 shadow-lg hover:bg-green-600 transition"
+  target="_blank"
+  aria-label="Chat via WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp" />
+</a>
+
+  <section id="artikel" class="relative w-full min-h-screen pt-16">
+  <!-- Background image -->
+  <img src="aset/img/banner2.jpg" class="absolute inset-0 w-full h-full object-cover z-0" alt="Banner Artikel">
+  <!-- Konten di atas gambar -->
+  <div class="absolute inset-0 z-10 bg-white/80 py-16 px-4 text-center backdrop-blur-sm">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-red-900 tracking-wide">
+      Artikel & Tips
+    </h2>
+    <p class="text-gray-700 mt-2 max-w-xl mx-auto text-sm md:text-base">
+      Dapatkan informasi menarik seputar ayam kribo, tips makan enak, dan kabar terbaru dari kami!
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-6 mt-10 max-w-7xl mx-auto">
+      <!-- Card Artikel -->
+      <div class="bg-white rounded-lg shadow">
+        <img src="aset/img/artikel1.jpg" alt="Tips Menggoreng Renyah" class="rounded-t-md w-full h-48 object-cover">
+        <div class="p-4 text-left">
+          <h3 class="text-lg font-semibold text-red-900">Cara Membuat Fried Chicken Renyah ala Restoran</h3>
+          <p class="text-gray-600 text-sm mt-2">Fried chicken atau ayam goreng tepung adalah salah satu makanan yang digemari semua kalangan, dari anak-anak hingga orang dewasa.</p>
+          <a href="modul/" class="inline-block mt-3 text-red-900 hover:underline text-sm font-medium">Baca Selengkapnya →</a>
+        </div>
+      </div>
+      <!-- Tambah artikel lainnya di sini -->
+       <div class="bg-white rounded-lg shadow hover:shadow-md transition">
+        <img src="aset/img/artikel2.jpg" alt="Tips Menggoreng Renyah" class="rounded-t-md w-full h-48 object-cover">
+        <div class="p-4 text-left">
+          <h3 class="text-lg font-semibold text-red-900">Ayam Serundeng: Perpaduan Gurihnya Ayam dan Harum Kelapa Parut</h3>
+          <p class="text-gray-600 text-sm mt-2">Ayam serundeng adalah salah satu menu khas Indonesia yang menggoda selera dengan kombinasi unik.</p>
+          <a href="#" class="inline-block mt-3 text-red-900 hover:underline text-sm font-medium">Baca Selengkapnya →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+    <div class="bg-red-900 py-12 text-center mt-14 mb-14 ">
+      <h2 class="text-2xl font-bold text-white mb-8">Kelebihan Ayam Kribo</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-white">
+        <div>
+          <p class="text-4xl font-bold">10+</p>
+          <p class="text-sm">Cabang</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold">5.000+</p>
+          <p class="text-sm">Ayam Terjual</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold">4.8⭐</p>
+          <p class="text-sm">Rating Pelanggan</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold">100%</p>
+          <p class="text-sm">Renyah & Gurih</p>
+        </div>
+      </div>
+   </div>
+
+  <section id="kontak" class="min-h-screen flex items-center justify-center bg-white px-4 text-center">
+
+    <div id="" class="pt-20 px-4 bg-white text-gray-800">
+  <!-- Judul -->
+  <div class="text-center mb-10">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-red-900">Hubungi Kami</h2>
+    <p class="text-sm md:text-base text-gray-600 mt-2">Punya pertanyaan atau ingin kerja sama? Kami siap membantu!</p>
+  </div>
+
+  <!-- Form & Info -->
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    
+    <!-- Formulir -->
+    <form class="space-y-4">
+      <input type="text" placeholder="Nama Anda" class="w-full p-3 border border-gray-300 rounded" required>
+      <input type="email" placeholder="Email Aktif" class="w-full p-3 border border-gray-300 rounded" required>
+      <textarea rows="5" placeholder="Pesan Anda" class="w-full p-3 border border-gray-300 rounded" required></textarea>
+      <button type="submit" class="bg-red-800 text-white py-2 px-6 rounded hover:bg-red-900 transition duration-200">
+        Kirim Pesan
+      </button>
+    </form>
+
+    <!-- Kontak Langsung -->
+    <div class="space-y-4 text-sm md:text-base">
+      <div class="bg-gray-50 p-5 rounded shadow">
+        <p class="font-semibold mb-1">📍 Kantor Pusat</p>
+        <p>Jl. Raya Jakarta-Bogor No.2a</p>
+      </div>
+      <div class="bg-gray-50 p-5 rounded shadow">
+        <p class="font-semibold mb-1">📞 Telepon</p>
+        <p>+62 123-4567-8901</p>
+      </div>
+      <div class="bg-gray-50 p-5 rounded shadow">
+        <p class="font-semibold mb-1">✉️ Email</p>
+        <p>ayamkribo@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+<footer class="bg-red-900 text-white px-4 sm:px-8 py-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 items-start text-sm">
+    
+    <!-- Kolom 1: Penyelenggara -->
+    <div class="text-center sm:text-left">
+      <img src="aset/img/itsday.png" alt="Logo IT's Day" class="w-20 mx-auto sm:mx-0 mb-2">
+      <p>Diselenggarakan oleh</p>
+      <p class="font-bold text-lg">IT’s Day 2025</p>
+    </div>
+
+    <!-- Kolom 2: Info Utama -->
+    <div class="text-center">
+      <div class="flex justify-center mb-2">
+        <h3 class="font-bold text-lg">AYAM KRIBO</h3>
+      </div>
+      <p class="italic text-sm text-white/80 mb-2">Renyahnya Bikin Kepikiran</p>
+      <p class="mb-2 font-semibold">📍Jl. Raya Jakarta-Bogor No.2a</p>
+      <p class="mb-2">📞 +62 123-4567-8901</p>
+      <p>🌐 <a href="http://www.ayamkribo.com" class="hover:underline">www.ayamkribo.com</a></p>
+    </div>
+
+    <!-- Kolom 3: Navigasi -->
+    <div class="text-center sm:text-right">
+      <h3 class="font-bold text-lg">Jam Operasional</h3>
+      <ul>
+        <li class="my-3">Senin - Jumat: 10.00 - 21.00</li>
+        <li>Sabtu - Minggu: 10.00 - 23.00</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Garis dan copyright -->
+  <div class="border-t border-white/30 mt-6 pt-4 text-center text-xs text-white/70">
+    © 2025 Ayam Kribo. All rights reserved.
+  </div>
+</footer>
+
+
+<script src="aset/js/index.js"></script>
+</body>
+</html>
